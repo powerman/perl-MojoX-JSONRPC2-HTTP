@@ -29,7 +29,7 @@ my $builder = $class->new(
         'perl'                  => 5.010001,
         'version'               => '0.77',
         'Mojolicious'           => 0,
-        'JSON::RPC2::Client'    => '0.2.0',
+        'JSON::RPC2'            => '1.0.0',
         'JSON::XS'              => 0,
     },
     test_requires => {
