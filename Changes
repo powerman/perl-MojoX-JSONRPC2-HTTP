@@ -1,5 +1,8 @@
 Revision history for MojoX-JSONRPC2-HTTP
 
+1.0.2   Wed Jun 25 13:16:13 EEST 2014
+	Require Mojolicious-5.0 for $res->error.
+
 1.0.1   Tue Jun 24 02:09:08 EEST 2014
 	Require JSON::RPC2-1.0.0 for tests.
 

@@ -23,7 +23,7 @@
          "requires" : {
             "JSON::RPC2" : "v1.0.0",
             "JSON::XS" : "0",
-            "Mojolicious" : "0",
+            "Mojolicious" : "5",
             "perl" : "5.010001",
             "version" : "0.77"
          }
@@ -44,7 +44,7 @@
    "provides" : {
       "MojoX::JSONRPC2::HTTP" : {
          "file" : "lib/MojoX/JSONRPC2/HTTP.pm",
-         "version" : "v1.0.1"
+         "version" : "v1.0.2"
       }
    },
    "release_status" : "stable",
@@ -53,5 +53,5 @@
          "http://www.opensource.org/licenses/mit-license.php"
       ]
    },
-   "version" : "v1.0.1"
+   "version" : "v1.0.2"
 }

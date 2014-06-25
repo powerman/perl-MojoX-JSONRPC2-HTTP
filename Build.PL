@@ -28,7 +28,7 @@ my $builder = $class->new(
     requires => {
         'perl'                  => 5.010001,
         'version'               => '0.77',
-        'Mojolicious'           => 0,
+        'Mojolicious'           => 5.0,
         'JSON::RPC2'            => '1.0.0',
         'JSON::XS'              => 0,
     },
