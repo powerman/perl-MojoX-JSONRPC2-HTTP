@@ -40,7 +40,7 @@ my $builder = $class->new(
         'Test::Pod'             => '1.22',
         'Test::Pod::Coverage'   => '1.08',
         'Pod::Coverage'         => '0.18',
-        'Mojolicious::Plugin::JSONRPC2' => 0,
+        'Mojolicious::Plugin::JSONRPC2' => '1.1.1',
     },
 #     add_to_cleanup     => [ 'MojoX-JSONRPC2-HTTP-*' ],
 );

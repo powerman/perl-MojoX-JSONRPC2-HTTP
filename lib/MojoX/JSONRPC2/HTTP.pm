@@ -3,7 +3,7 @@ package MojoX::JSONRPC2::HTTP;
 use Mojo::Base -base;
 use Carp;
 
-use version; our $VERSION = qv('1.0.2');    # REMINDER: update Changes
+use version; our $VERSION = qv('1.0.3');    # REMINDER: update Changes
 
 # REMINDER: update dependencies in Build.PL
 use Mojo::UserAgent;
