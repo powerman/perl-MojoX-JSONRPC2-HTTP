@@ -1,5 +1,8 @@
 Revision history for MojoX-JSONRPC2-HTTP
 
+1.0.4   Wed Nov 19 17:58:25 EET 2014
+	Fix tests portability.
+
 1.0.3   Tue Nov 18 01:24:44 EET 2014
 	Require Mojolicious::Plugin::JSONRPC2-1.1.1 for tests.
 

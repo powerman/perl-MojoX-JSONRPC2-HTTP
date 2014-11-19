@@ -44,7 +44,7 @@ is ref $client->ua, 'Mojo::UserAgent',
 
 # network error
 my ($failed,$result,$error) = $client->url('http://no-such-host-qKfdsEsZ/')->call('method');
-like $failed, qr/connect/, 'network error';
+like $failed, qr/connect|resolve/msi, 'network error';
 
 $client->url('/');
 

@@ -23,7 +23,7 @@ name: MojoX-JSONRPC2-HTTP
 provides:
   MojoX::JSONRPC2::HTTP:
     file: lib/MojoX/JSONRPC2/HTTP.pm
-    version: v1.0.3
+    version: v1.0.4
 requires:
   JSON::RPC2: v1.0.0
   JSON::XS: '0'
@@ -32,4 +32,4 @@ requires:
   version: '0.77'
 resources:
   license: http://www.opensource.org/licenses/mit-license.php
-version: v1.0.3
+version: v1.0.4
