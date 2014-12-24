@@ -16,7 +16,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build" : "0"
+            "Module::Build" : "0.4004"
          }
       },
       "runtime" : {
@@ -44,7 +44,7 @@
    "provides" : {
       "MojoX::JSONRPC2::HTTP" : {
          "file" : "lib/MojoX/JSONRPC2/HTTP.pm",
-         "version" : "v1.0.4"
+         "version" : "v1.0.5"
       }
    },
    "release_status" : "stable",
@@ -53,5 +53,5 @@
          "http://www.opensource.org/licenses/mit-license.php"
       ]
    },
-   "version" : "v1.0.4"
+   "version" : "v1.0.5"
 }

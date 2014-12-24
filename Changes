@@ -1,5 +1,8 @@
 Revision history for MojoX-JSONRPC2-HTTP
 
+1.0.5   Wed Dec 24 11:59:52 EET 2014
+	Fix dependencies.
+
 1.0.4   Wed Nov 19 17:58:25 EET 2014
 	Fix tests portability.
 
