@@ -1,6 +1,8 @@
 Revision history for MojoX-JSONRPC2-HTTP
 
 {{$NEXT}}
+
+v2.0.0  2016-02-17 23:25:55 EET
 	- Switch to Dist::Milla.
 
 1.0.5   2014-12-24 11:59:52 EET

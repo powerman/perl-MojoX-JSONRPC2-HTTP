@@ -63,7 +63,7 @@
    "provides" : {
       "MojoX::JSONRPC2::HTTP" : {
          "file" : "lib/MojoX/JSONRPC2/HTTP.pm",
-         "version" : "v1.0.5"
+         "version" : "v2.0.0"
       }
    },
    "release_status" : "stable",
@@ -78,6 +78,6 @@
          "web" : "https://github.com/powerman/perl-MojoX-JSONRPC2-HTTP"
       }
    },
-   "version" : "v1.0.5"
+   "version" : "v2.0.0"
 }
 
