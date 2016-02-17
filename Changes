@@ -1,20 +1,22 @@
 Revision history for MojoX-JSONRPC2-HTTP
 
-1.0.5   Wed Dec 24 11:59:52 EET 2014
-	Fix dependencies.
+{{$NEXT}}
+	- Switch to Dist::Milla.
 
-1.0.4   Wed Nov 19 17:58:25 EET 2014
-	Fix tests portability.
+1.0.5   2014-12-24 11:59:52 EET
+	- Fix dependencies.
 
-1.0.3   Tue Nov 18 01:24:44 EET 2014
-	Require Mojolicious::Plugin::JSONRPC2-1.1.1 for tests.
+1.0.4   2014-11-19 17:58:25 EET
+	- Fix tests portability.
 
-1.0.2   Wed Jun 25 13:16:13 EEST 2014
-	Require Mojolicious-5.0 for $res->error.
+1.0.3   2014-11-18 01:24:44 EET
+	- Require Mojolicious::Plugin::JSONRPC2-1.1.1 for tests.
 
-1.0.1   Tue Jun 24 02:09:08 EEST 2014
-	Require JSON::RPC2-1.0.0 for tests.
+1.0.2   2014-06-25 13:16:13 EEST
+	- Require Mojolicious-5.0 for $res->error.
 
-1.0.0	Fri Jun 20 17:15:44 EEST 2014
-	Initial release.
+1.0.1   2014-06-24 02:09:08 EEST
+	- Require JSON::RPC2-1.0.0 for tests.
 
+1.0.0	2014-06-20 17:15:44 EEST
+	- Initial release.

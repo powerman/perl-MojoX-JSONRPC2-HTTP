@@ -2,10 +2,10 @@ use Test::More;
 use Test::Exception;
 use Test::Mojo;
 use Mojolicious::Lite;
-use JSON::RPC2::Server 1.0.0;
+use JSON::RPC2::Server;
 use MojoX::JSONRPC2::HTTP;
 
-eval 'use Mojolicious::Plugin::JSONRPC2';
+eval { require Mojolicious::Plugin::JSONRPC2 };
 plan skip_all => 'Mojolicious::Plugin::JSONRPC2 required' if $@;
 
 $ENV{MOJO_LOG_LEVEL} = 'warn';
