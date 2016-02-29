@@ -58,73 +58,79 @@ All these methods return current value when called without params or set
 new value and return their object (to allow method chaining) when called
 with single param.
 
-- url
+## url
 
-    RPC endpoint url.
+RPC endpoint url.
 
-    This is only required parameter which must be set before doing RPC calls.
+This is only required parameter which must be set before doing RPC calls.
 
-- method
+## method
 
-    Default is `'POST'`, and only another supported value is `'GET'`.
+Default is `'POST'`, and only another supported value is `'GET'`.
 
-- type
+## type
 
-    Default is `'application/json'`.
+Default is `'application/json'`.
 
-- headers
+## headers
 
-    Default is empty HASHREF. Either modify it by reference or set it to your
-    own HASHREF with any extra headers you need to send with RPC call.
+Default is empty HASHREF. Either modify it by reference or set it to your
+own HASHREF with any extra headers you need to send with RPC call.
 
-- ua
+## ua
 
-    `Mojo::UserAgent` object used for sending HTTP requests - feel free to
-    setup it or replace with your own object.
+`Mojo::UserAgent` object used for sending HTTP requests - feel free to
+setup it or replace with your own object.
 
 # METHODS
 
-- new( %attrs )
-- new( \\%attrs )
+## new
 
-    You can set attributes listed above by providing their values when calling
-    `new()` or later using individual attribute methods.
+    $client = MojoX::JSONRPC2::HTTP->new( %attrs );
+    $client = MojoX::JSONRPC2::HTTP->new( \%attrs );
 
-- call( 'method', @params )
-- call( 'method', @params, \\&cb )
-- call\_named( 'method', %params )
-- call\_named( 'method', %params, \\&cb )
+You can set attributes listed above by providing their values when calling
+`new()` or later using individual attribute methods.
 
-    Do blocking or non-blocking (when `\&cb` param provided) RPC calls, with
-    either positional or named params. Blocking calls will return these values
-    (non-blocking will call `\&cb` with same values as params):
+## call
 
-        ($failed, $result, $error)
+    ($failed, $result, $error) = $client->call( 'method', @params );
+    ($failed, $result, $error) = $client->call_named( 'method', %params );
+    $client->call( 'method', @params, \&cb );
+    $client->call_named( 'method', %params, \&cb );
 
-    In case of transport-level errors, when we fail to either send RPC request
-    or receive correct reply from RPC server the `$failed` will contain error
-    message, while `$result` and `$error` will be undefined.
+Do blocking or non-blocking (when `\&cb` param provided) RPC calls, with
+either positional or named params. Blocking calls will return these values
+(non-blocking will call `\&cb` with same values as params):
 
-    In case remote `'method'` or RPC server itself will return error it will
-    be available in `$error` as HASHREF with keys `{code}`, `{message}` and
-    optionally `{data}`, while `$failed` and `$result` will be undefined.
+    ($failed, $result, $error)
 
-    Otherwise value returned by remote `'method'` will be in `$result`,
-    while `$failed` and `$error` will be undefined.
+In case of transport-level errors, when we fail to either send RPC request
+or receive correct reply from RPC server the `$failed` will contain error
+message, while `$result` and `$error` will be undefined.
 
-- notify( 'method', @params )
-- notify( 'method', @params, \\&cb )
-- notify\_named( 'method', %params )
-- notify\_named( 'method', %params, \\&cb )
+In case remote `'method'` or RPC server itself will return error it will
+be available in `$error` as HASHREF with keys `{code}`, `{message}` and
+optionally `{data}`, while `$failed` and `$result` will be undefined.
 
-    Do blocking or non-blocking (when `\&cb` param provided) RPC calls, with
-    either positional or named params. Blocking calls will return this value
-    (non-blocking will call `\&cb` with same value as param):
+Otherwise value returned by remote `'method'` will be in `$result`,
+while `$failed` and `$error` will be undefined.
 
-        $failed
+## notify
 
-    It will contain error message in case of transport-level error or will be
-    undefined if RPC call was executes successfully.
+    $failed = $client->notify( 'method', @params );
+    $failed = $client->notify_named( 'method', %params );
+    $client->notify( 'method', @params, \&cb );
+    $client->notify_named( 'method', %params, \&cb );
+
+Do blocking or non-blocking (when `\&cb` param provided) RPC calls, with
+either positional or named params. Blocking calls will return this value
+(non-blocking will call `\&cb` with same value as param):
+
+    $failed
+
+It will contain error message in case of transport-level error or will be
+undefined if RPC call was executes successfully.
 
 # SEE ALSO
 
@@ -182,7 +188,7 @@ Alex Efros &lt;powerman@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2014 by Alex Efros &lt;powerman@cpan.org>.
+This software is Copyright (c) 2014- by Alex Efros &lt;powerman@cpan.org>.
 
 This is free software, licensed under:
 

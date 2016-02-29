@@ -172,53 +172,47 @@ All these methods return current value when called without params or set
 new value and return their object (to allow method chaining) when called
 with single param.
 
-=over
-
-=item url
+=head2 url
 
 RPC endpoint url.
 
 This is only required parameter which must be set before doing RPC calls.
 
-=item method
+=head2 method
 
 Default is C<'POST'>, and only another supported value is C<'GET'>.
 
-=item type
+=head2 type
 
 Default is C<'application/json'>.
 
-=item headers
+=head2 headers
 
 Default is empty HASHREF. Either modify it by reference or set it to your
 own HASHREF with any extra headers you need to send with RPC call.
 
-=item ua
+=head2 ua
 
 C<Mojo::UserAgent> object used for sending HTTP requests - feel free to
 setup it or replace with your own object.
 
-=back
-
 
 =head1 METHODS
 
-=over
+=head2 new
 
-=item new( %attrs )
-
-=item new( \%attrs )
+    $client = MojoX::JSONRPC2::HTTP->new( %attrs );
+    $client = MojoX::JSONRPC2::HTTP->new( \%attrs );
 
 You can set attributes listed above by providing their values when calling
 C<new()> or later using individual attribute methods.
 
-=item call( 'method', @params )
+=head2 call
 
-=item call( 'method', @params, \&cb )
-
-=item call_named( 'method', %params )
-
-=item call_named( 'method', %params, \&cb )
+    ($failed, $result, $error) = $client->call( 'method', @params );
+    ($failed, $result, $error) = $client->call_named( 'method', %params );
+    $client->call( 'method', @params, \&cb );
+    $client->call_named( 'method', %params, \&cb );
 
 Do blocking or non-blocking (when C<\&cb> param provided) RPC calls, with
 either positional or named params. Blocking calls will return these values
@@ -237,13 +231,12 @@ optionally C<{data}>, while C<$failed> and C<$result> will be undefined.
 Otherwise value returned by remote C<'method'> will be in C<$result>,
 while C<$failed> and C<$error> will be undefined.
 
-=item notify( 'method', @params )
+=head2 notify
 
-=item notify( 'method', @params, \&cb )
-
-=item notify_named( 'method', %params )
-
-=item notify_named( 'method', %params, \&cb )
+    $failed = $client->notify( 'method', @params );
+    $failed = $client->notify_named( 'method', %params );
+    $client->notify( 'method', @params, \&cb );
+    $client->notify_named( 'method', %params, \&cb );
 
 Do blocking or non-blocking (when C<\&cb> param provided) RPC calls, with
 either positional or named params. Blocking calls will return this value
@@ -253,8 +246,6 @@ either positional or named params. Blocking calls will return this value
 
 It will contain error message in case of transport-level error or will be
 undefined if RPC call was executes successfully.
-
-=back
 
 
 =head1 SEE ALSO
@@ -325,7 +316,7 @@ Alex Efros E<lt>powerman@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2014 by Alex Efros E<lt>powerman@cpan.orgE<gt>.
+This software is Copyright (c) 2014- by Alex Efros E<lt>powerman@cpan.orgE<gt>.
 
 This is free software, licensed under:
 
