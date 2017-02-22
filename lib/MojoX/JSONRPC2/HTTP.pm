@@ -209,6 +209,8 @@ C<new()> or later using individual attribute methods.
 
 =head2 call
 
+=head2 call_named
+
     ($failed, $result, $error) = $client->call( 'method', @params );
     ($failed, $result, $error) = $client->call_named( 'method', %params );
     $client->call( 'method', @params, \&cb );
@@ -232,6 +234,8 @@ Otherwise value returned by remote C<'method'> will be in C<$result>,
 while C<$failed> and C<$error> will be undefined.
 
 =head2 notify
+
+=head2 notify_named
 
     $failed = $client->notify( 'method', @params );
     $failed = $client->notify_named( 'method', %params );
