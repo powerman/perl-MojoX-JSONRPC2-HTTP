@@ -7,7 +7,7 @@ MojoX::JSONRPC2::HTTP - Client for JSON RPC 2.0 over HTTP
 
 # VERSION
 
-This document describes MojoX::JSONRPC2::HTTP version v2.0.0
+This document describes MojoX::JSONRPC2::HTTP version v2.0.1
 
 # SYNOPSIS
 
@@ -94,6 +94,8 @@ You can set attributes listed above by providing their values when calling
 
 ## call
 
+## call\_named
+
     ($failed, $result, $error) = $client->call( 'method', @params );
     ($failed, $result, $error) = $client->call_named( 'method', %params );
     $client->call( 'method', @params, \&cb );
@@ -117,6 +119,8 @@ Otherwise value returned by remote `'method'` will be in `$result`,
 while `$failed` and `$error` will be undefined.
 
 ## notify
+
+## notify\_named
 
     $failed = $client->notify( 'method', @params );
     $failed = $client->notify_named( 'method', %params );
@@ -184,11 +188,11 @@ Feel free to fork the repository and submit pull requests.
 
 # AUTHOR
 
-Alex Efros &lt;powerman@cpan.org>
+Alex Efros <powerman@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2014- by Alex Efros &lt;powerman@cpan.org>.
+This software is Copyright (c) 2014- by Alex Efros <powerman@cpan.org>.
 
 This is free software, licensed under:
 
