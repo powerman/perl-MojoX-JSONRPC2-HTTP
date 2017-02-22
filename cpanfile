@@ -5,7 +5,7 @@ requires 'JSON::RPC2::Client';
 requires 'JSON::XS';
 requires 'Mojo::Base';
 requires 'Mojo::UserAgent';
-requires 'Mojolicious', '5';
+requires 'Mojolicious', '7.13';
 requires 'Scalar::Util';
 
 on configure => sub {

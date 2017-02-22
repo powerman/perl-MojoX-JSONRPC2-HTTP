@@ -83,11 +83,11 @@ sub _response {
     }
     # use HTTP code as error message instead of 'Parse error' for:
     # - strange HTTP reply code or non-empty content (notify)
-    elsif ($is_notify  && !($res->is_status_class(HTTP_200) && $res->body =~ /\A\s*\z/ms)) {
+    elsif ($is_notify  && !($res->is_success && $res->body =~ /\A\s*\z/ms)) {
         $failed = sprintf '%d %s', $res->code, $res->message;
     }
     # - strange HTTP reply code or non-json content (call)
-    elsif (!$is_notify && !($res->is_status_class(HTTP_200) && $res->body =~ /\A\s*[{\[]/ms)) {
+    elsif (!$is_notify && !($res->is_success && $res->body =~ /\A\s*[{\[]/ms)) {
         $failed = sprintf '%d %s', $res->code, $res->message;
     }
     elsif (!$is_notify) {
