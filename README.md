@@ -7,7 +7,7 @@ MojoX::JSONRPC2::HTTP - Client for JSON RPC 2.0 over HTTP
 
 # VERSION
 
-This document describes MojoX::JSONRPC2::HTTP version v2.0.1
+This document describes MojoX::JSONRPC2::HTTP version v2.0.2
 
 # SYNOPSIS
 
