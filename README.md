@@ -7,7 +7,7 @@ MojoX::JSONRPC2::HTTP - Client for JSON RPC 2.0 over HTTP
 
 # VERSION
 
-This document describes MojoX::JSONRPC2::HTTP version v2.0.2
+This document describes MojoX::JSONRPC2::HTTP version v2.0.3
 
 # SYNOPSIS
 
@@ -138,13 +138,13 @@ undefined if RPC call was executes successfully.
 
 # SEE ALSO
 
-[JSON::RPC2::Client](https://metacpan.org/pod/JSON::RPC2::Client), [Mojolicious](https://metacpan.org/pod/Mojolicious), [Mojolicious::Plugin::JSONRPC2](https://metacpan.org/pod/Mojolicious::Plugin::JSONRPC2).
+[JSON::RPC2::Client](https://metacpan.org/pod/JSON%3A%3ARPC2%3A%3AClient), [Mojolicious](https://metacpan.org/pod/Mojolicious), [Mojolicious::Plugin::JSONRPC2](https://metacpan.org/pod/Mojolicious%3A%3APlugin%3A%3AJSONRPC2).
 
 # LIMITATIONS
 
 - Batch/Multicall feature
 
-    Not supported because it is not implemented by [JSON::RPC2::Client](https://metacpan.org/pod/JSON::RPC2::Client).
+    Not supported because it is not implemented by [JSON::RPC2::Client](https://metacpan.org/pod/JSON%3A%3ARPC2%3A%3AClient).
 
 # SUPPORT
 
